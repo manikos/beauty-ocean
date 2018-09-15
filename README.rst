@@ -117,10 +117,7 @@ Features
 
 Demo
 ----
-
-.. raw:: html
-
-    <video controls src="/beauty_ocean/docs/_static/demo.mp4"></video>
+An mp4 video demo can be found `here <https://beauty-ocean.readthedocs.io/en/latest/usage.html#demo>`_.
 
 
 Credits

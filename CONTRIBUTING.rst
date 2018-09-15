@@ -45,7 +45,8 @@ articles, and such.
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at https://github.com/manikos/beauty_ocean/issues.
+The best way to send feedback is to file an issue at
+https://github.com/manikos/beauty_ocean/issues.
 
 If you are proposing a feature:
 
@@ -60,38 +61,52 @@ Get Started!
 Ready to contribute? Here's how to set up `beauty_ocean` for local development.
 
 1. Fork the `beauty_ocean` repo on GitHub.
-2. Clone your fork locally::
+
+2. Clone your fork locally
+
+.. code-block:: console
 
     $ git clone git@github.com:your_name_here/beauty_ocean.git
 
-3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
+3. Install your local copy into a virtualenv. Assuming you have
+virtualenvwrapper installed, this is how you set up your fork for
+local development
+
+.. code-block:: console
 
     $ mkvirtualenv beauty_ocean
-    (beauty_ocean) $ cd beauty_ocean/
-    (beauty_ocean) $ pip install -e .
+    (beauty_ocean)$ cd beauty_ocean/
+    (beauty_ocean)$ pip install -e .
 
-4. Create a branch for local development::
+4. Create a branch for local development
+
+.. code-block:: console
 
     $ git checkout -b name-of-your-bugfix-or-feature
 
-   Now you can make your changes locally.
+Now you can make your changes locally.
 
 5. When you're done making changes, check that your changes pass flake8 and the
-   tests, including testing other Python versions with tox::
+   tests, including testing other Python versions with tox
+
+.. code-block:: console
 
     $ flake8 beauty_ocean tests
-    $ py.test or pytest
+    $ pytest
     $ tox
 
-   To get flake8, tox and pytest, just pip install them into your virtualenv.
+To get flake8, tox and pytest, just pip install them into your virtualenv.
 
-6. Commit your changes and push your branch to GitHub::
+6. Commit your changes and push your branch to GitHub
+
+.. code-block:: console
 
     $ git add .
     $ git commit -m "Your detailed description of your changes."
     $ git push origin name-of-your-bugfix-or-feature
 
 7. Submit a pull request through the GitHub website.
+
 
 Pull Request Guidelines
 -----------------------
@@ -101,28 +116,41 @@ Before you submit a pull request, check that it meets these guidelines:
 1. The pull request should include tests.
 2. If the pull request adds functionality, the docs should be updated. Put
    your new functionality into a function with a docstring, and add the
-   feature to the list in README.rst.
-3. The pull request should work for Python 2.7, 3.4, 3.5 and 3.6, and for PyPy. Check
-   https://travis-ci.org/manikos/beauty_ocean/pull_requests
-   and make sure that the tests pass for all supported Python versions.
+   feature to the list in ``README.rst``.
+3. The pull request should work for Python 3.6+ and for PyPy.
+   Check https://travis-ci.org/manikos/beauty_ocean/pull_requests and make
+   sure that the tests pass for all supported Python versions.
+
 
 Tips
 ----
 
-To run a subset of tests::
+To run a subset of tests
 
-$ py.test tests.test_beauty_ocean
+.. code-block:: console
+
+    # run all tests inside test_cli.py
+    $ pytest tests/test_cli.py
+
+    # run all tests inside the tests/core/ directory
+    $ pytest tests/core/
+
+    # find all test functions whose names contain "get_account_data"
+    # and run these tests
+    $ pytest -k "get_account_data"
 
 
 Deploying
 ---------
 
 A reminder for the maintainers on how to deploy.
-Make sure all your changes are committed (including an entry in HISTORY.rst).
-Then run::
+Make sure all your changes are committed (including an entry in ``HISTORY.rst``).
+Then run
 
-$ bumpversion patch # possible: major / minor / patch
-$ git push
-$ git push --tags
+.. code-block:: console
+
+    $ bump2version patch # possible: major / minor / patch
+    $ git push
+    $ git push --tags
 
 Travis will then deploy to PyPI if tests pass.

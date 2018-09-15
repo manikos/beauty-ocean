@@ -6,25 +6,21 @@ Usage
 python library ``click``. Assuming that ``beauty_ocean`` is already installed
 inside your virtualenv's dev-dependencies (or globally) then in your terminal:
 
-::
+.. code-block:: console
 
-    droplet
-
-    # or
-
-    droplet --token DIGITAL_OCEAN_API_TOKEN_ENV_NAME
+    $ droplet
 
     # or
-
-    droplet --token path/to/file/that/holds/the/token
+    $ droplet --token DIGITAL_OCEAN_API_TOKEN_ENV_NAME
 
     # or
+    $ droplet --token path/to/file/that/holds/the/token
 
-    droplet --token THEACTUALAPITOKENHERE
+    # or
+    $ droplet --token THE_ACTUAL_API_TOKEN_HERE
 
     # want help?
-
-    droplet --help
+    $ droplet --help
 
 
 ``beauty_ocean`` accepts one option ``-t`` (short version) or

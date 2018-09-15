@@ -5,22 +5,23 @@ Installation
 ============
 
 
-Stable release
---------------
+Stable release (preferred method)
+---------------------------------
 
-To install beauty-ocean, run this command in your terminal:
+To install beauty-ocean, run this command in your terminal (**do not run this
+command using sudo**, instead create a virtualenv. If you can't create one,
+install it inside your ``~/.local/`` dir using ``pip install --user beauty-ocean``):
 
 .. code-block:: console
 
-    $ pip install beauty_ocean
+    (virtualenv_name)$ pip install beauty-ocean
 
-This is the preferred method to install beauty-ocean, as it will always install the most recent stable release.
+This is the preferred method to install ``beauty-ocean``, as it will **not**
+interfere with your system packages and in addition it will always be the
+most recent stable release.
 
-If you don't have `pip`_ installed, this `Python installation guide`_ can guide
-you through the process.
-
-.. _pip: https://pip.pypa.io
-.. _Python installation guide: http://docs.python-guide.org/en/latest/starting/installation/
+If you don't have `pip`_ installed (which is very unlikely if you are under
+a virtualenv), this `Python installation guide`_ can guide you through the process.
 
 
 From sources
@@ -28,24 +29,21 @@ From sources
 
 The sources for beauty-ocean can be downloaded from the `Github repo`_.
 
-You can either clone the public repository:
+You can either install it directly from the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/manikos/beauty_ocean
+    $ pip install git+https://github.com/manikos/beauty-ocean.git
 
-Or download the `tarball`_:
-
-.. code-block:: console
-
-    $ curl  -OL https://github.com/manikos/beauty_ocean/tarball/master
-
-Once you have a copy of the source, you can install it with:
+Or download and install the `tarball`_:
 
 .. code-block:: console
 
-    $ python setup.py install
+    $ curl -OJL https://github.com/manikos/beauty-ocean/tarball/master
+    $ pip install manikos-beauty-ocean-<commit_hash>.tar.gz
 
 
-.. _Github repo: https://github.com/manikos/beauty_ocean
+.. _pip: https://pip.pypa.io/en/stable/installing/
+.. _Python installation guide: http://docs.python-guide.org/en/latest/starting/installation/
+.. _Github repo: https://github.com/manikos/beauty-ocean
 .. _tarball: https://github.com/manikos/beauty_ocean/tarball/master

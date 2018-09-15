@@ -276,7 +276,7 @@ def confirm_droplet_data(droplet_params) -> bool:
     :return: boolean
     """
     helpers.review_droplet_data(droplet_params)
-    msg = "One step before droplet creation (ﾉ◕ヮ◕)ﾉ*・ﾟ✧ Confirm selections"
+    msg = "One step before droplet creation! Confirm selections"
     q = q_confirm(message=msg, default=True)
     confirm = answer(q)
     return confirm

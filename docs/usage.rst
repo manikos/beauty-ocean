@@ -2,8 +2,9 @@
 Usage
 =====
 
-``beauty_ocean`` was designed to be used as a cli command via the excellent
-python library `click <https://github.com/pallets/click>`_.
+``beauty_ocean`` was designed to be used not only as a cli command (via the
+excellent python library `click <https://github.com/pallets/click>`_) but
+also as a function call as well.
 Assuming that ``beauty_ocean`` is already installed inside your virtualenv's
 dev-dependencies (or globally) then in your terminal:
 
@@ -51,12 +52,15 @@ of questions like the droplet's region, image, size, name etc and once all
 these questions have been answered, a final confirmation dialog will be
 displayed in order to create the droplet.
 
+Finally, a json string will be returned with all the droplet data at your
+disposal to use it in any way you want.
+
 DEMO
 ----
 
 .. raw:: html
 
-    <video controls src="_static/demo.mp4"></video>
+    <video controls src="_static/new_demo.mp4"></video>
 
 
 I built this tool to enhance automation of Digital Ocean's droplet(s).

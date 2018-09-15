@@ -13,7 +13,7 @@ def create_droplet(token: str = None):
     """
     Interactive console questions for Digital Ocean droplet creation.
 
-    :param str token:
+    :param str token: the DigitalOcean API token
     :return: json (with droplet info)
     """
     # Get user-provided digital ocean API token
@@ -84,7 +84,7 @@ def create_droplet(token: str = None):
 
     if confirm:
         droplet = helpers.create_droplet_now(droplet_params)
-        return helpers.droplet_data_json(droplet)
+        print(helpers.droplet_data_json(droplet))
     else:
         print(p_text("Configuration declined! ¯\_(⊙︿⊙)_/¯"))
         sys.exit(0)

@@ -24,7 +24,7 @@ setup(
     version="0.1.0",
     author="Nick Mavrakis",
     author_email="mavrakis.n@gmail.com",
-    url="https://github.com/manikos/beauty_ocean",
+    url="https://github.com/manikos/beauty-ocean",
     license="MIT license",
 
     # Description
@@ -62,7 +62,6 @@ setup(
     keywords="cli digital-ocean DigitalOcean droplet inquirer",
     project_urls={
         'Documentation': 'https://beauty-ocean.readthedocs.io/en/latest/',
-        'Source': 'https://github.com/manikos/beauty-ocean/',
         'Tracker': 'https://github.com/manikos/beauty-ocean/issues/',
     },
     classifiers=[

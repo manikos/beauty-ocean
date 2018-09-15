@@ -108,10 +108,11 @@ def ask_for_size(manager: Manager, available_sizes: list):
 def ask_for_droplet_name() -> str:
     """
     Present a prompt for the user to enter a name for the droplet.
+    Valid droplet name characters: a-z, A-Z, 0-9, . and -
 
     :return: str (the preferred name)
     """
-    pattern = re.compile("^[a-zA-Z]+[-\w_]*$")
+    pattern = re.compile("^[a-zA-Z0-9]+[-.a-zA-Z0-9]*$")
     q = question(
         message="Enter a name for the droplet",
         validate=lambda _, x: pattern.match(x),

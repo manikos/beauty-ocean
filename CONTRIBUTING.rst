@@ -75,8 +75,8 @@ local development
 .. code-block:: console
 
     $ mkvirtualenv beauty_ocean
-    (beauty_ocean)$ cd beauty_ocean/
-    (beauty_ocean)$ pip install -e .
+    (beauty_ocean) $ cd beauty_ocean/
+    (beauty_ocean) $ pip install -e .
 
 4. Create a branch for local development
 

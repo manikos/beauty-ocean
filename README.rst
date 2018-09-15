@@ -59,7 +59,7 @@ Installation is just a `pip install` away:
 
 .. code-block:: console
 
-    (virtualenv_name)$ pip install beauty-ocean
+    (virtualenv_name) $ pip install beauty-ocean
 
 You are using virtualenv, don't you? If not, install it inside your
 ``~/.local`` directory.
@@ -68,7 +68,7 @@ You are using virtualenv, don't you? If not, install it inside your
 
     $ pip install --user beauty-ocean
 
-`**Never ever** use sudo! <https://youtu.be/5BqAeN-F9Qs?t=8m42s>`_
+`Never ever use sudo! <https://youtu.be/5BqAeN-F9Qs?t=8m42s>`_
 
 
 Usage
@@ -94,14 +94,14 @@ the token only.
 
 .. code-block:: console
 
-    droplet --t path/to/file/that/holds/the/token
+    $ droplet --t path/to/file/that/holds/the/token
 
 Lastly, **but not recommended**, you may pass directly, to the ``-t`` option,
 the token itself.
 
 .. code-block:: console
 
-    droplet --t THE_ACTUAL_API_TOKEN_HERE
+    $ droplet --t THE_ACTUAL_API_TOKEN_HERE
 
 Once the token is resolved, a series of questions will be initiated in order
 to get the available data from you, submit this data to the Digital Ocean

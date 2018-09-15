@@ -14,7 +14,7 @@ install it inside your ``~/.local/`` dir using ``pip install --user beauty-ocean
 
 .. code-block:: console
 
-    (virtualenv_name)$ pip install beauty-ocean
+    (virtualenv_name) $ pip install beauty-ocean
 
 This is the preferred method to install ``beauty-ocean``, as it will **not**
 interfere with your system packages and in addition it will always be the

@@ -12,14 +12,6 @@ beauty\_ocean.core.api module
     :undoc-members:
     :show-inheritance:
 
-beauty\_ocean.core.config module
---------------------------------
-
-.. automodule:: beauty_ocean.core.config
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
 beauty\_ocean.core.helpers module
 ---------------------------------
 

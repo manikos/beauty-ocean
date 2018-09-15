@@ -115,6 +115,14 @@ Features
 * Supports remote or local SSH keys addition and/or remote/local Tags
 
 
+Demo
+----
+
+.. raw:: html
+
+    <video controls src="/beauty_ocean/docs/_static/demo.mp4"></video>
+
+
 Credits
 -------
 This package was created using:

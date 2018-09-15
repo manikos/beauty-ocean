@@ -141,7 +141,7 @@ def ask_for_ssh_keys_addition_method() -> str:
     """
     ssh_method_choices = choices.prepare_ssh_keys_addition_method_choices()
     q = q_radio(
-        message="Select ssh addition method", choices=ssh_method_choices
+        message="SSH addition method", choices=ssh_method_choices
     )
     addition_method = answer(q)
     return addition_method

@@ -62,7 +62,7 @@ def prepare_ssh_keys_addition_method_choices() -> List[Tuple[str, str]]:
     :return: list of 2-len tuples
     """
     remote = "Load ssh keys from your DO account (you'll be asked which " \
-             "one(s) to use on the next step)"
+             "one(s) to use on next step)"
     local = "Load ssh public key from your local filesystem"
     return [(remote, "remote"), (local, "local")]
 

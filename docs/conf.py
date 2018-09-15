@@ -99,9 +99,10 @@ html_theme = 'alabaster'
 html_theme_options = {
     'logo': 'logo.png',
     'logo_name': True,  # show project name under the logo
+    'logo_text_align': 'center',
     'description': 'Beautiful cli based on DigitalOcean API',
     'github_user': 'manikos',
-    'github_repo': 'beauty_ocean',
+    'github_repo': 'beauty-ocean',
     'page_width': '1080px',  # set content/page width
     'sidebar_width': '265px',
     'fixed_sidebar': True,

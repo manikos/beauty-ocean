@@ -1,5 +1,6 @@
 from setuptools import setup, find_packages
 
+
 with open("README.rst") as readme_file:
     readme = readme_file.read()
 
@@ -17,8 +18,6 @@ requirements = [
 
 # setup_requirements = ["pytest-runner"]
 
-# test_requirements = ["pytest"]
-
 setup(
     # Project information
     name="beauty_ocean",
@@ -34,10 +33,9 @@ setup(
     long_description_content_type='text/x-rst',
 
     # Requirements
+    python_requires='>=3.6',
     install_requires=requirements,
     # setup_requires=setup_requirements,
-    # tests_require=test_requirements,
-    python_requires='>=3.6',
     extras_require={
         'test': [  # install these with: pip install beauty_ocean[test]
             "pytest>=3.8",
@@ -48,13 +46,12 @@ setup(
     },
 
     # Packaging
-    packages=find_packages(include=["beauty_ocean"]),
+    packages=find_packages(include=["beauty_ocean", "beauty_ocean.*"]),
     include_package_data=True,
     zip_safe=False,
 
     # Tests
     test_suite="tests",
-
 
     # CLI
     entry_points={

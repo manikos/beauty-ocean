@@ -108,6 +108,9 @@ to get the available data from you, submit this data to the Digital Ocean
 API and create the droplet. All the above come in a good-looking format
 of questions.
 
+Finally, a json string will be returned with all the droplet data at your
+disposal to use it in any way you want.
+
 
 Features
 --------

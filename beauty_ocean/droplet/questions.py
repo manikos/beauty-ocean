@@ -127,7 +127,7 @@ def confirm_ssh_addition() -> bool:
 
     :return: boolean
     """
-    msg = "Add ssh keys (if not an email will be sent with the root password)"
+    msg = "Add ssh keys\n(if not an email will be sent with the root password)"
     q = q_confirm(message=msg, default=True)
     add_ssh_keys = answer(q)
     return add_ssh_keys
@@ -276,7 +276,7 @@ def confirm_droplet_data(droplet_params) -> bool:
     :return: boolean
     """
     helpers.review_droplet_data(droplet_params)
-    msg = "One step before droplet creation! Confirm selections"
+    msg = "One step before droplet creation!\nConfirm selections"
     q = q_confirm(message=msg, default=True)
     confirm = answer(q)
     return confirm

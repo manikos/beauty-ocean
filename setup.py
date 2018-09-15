@@ -21,7 +21,7 @@ requirements = [
 setup(
     # Project information
     name="beauty_ocean",
-    version="0.1.0",
+    version="version='0.1.1'",
     author="Nick Mavrakis",
     author_email="mavrakis.n@gmail.com",
     url="https://github.com/manikos/beauty-ocean",

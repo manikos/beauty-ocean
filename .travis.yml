@@ -2,18 +2,17 @@ language: python
 
 python: 
   - "3.6"
-  - "3.7"
 
 matrix:
   fast_finish: true
 
-# command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
+# command to install dependencies
 install:
-  - 'pip install pipenv'
-  - 'pipenv install --dev'
+  - pip install pipenv
+  - pipenv install --dev
 
-# command to run tests using coverage, e.g. python setup.py test
-script: 'pytest --cov=beauty_ocean --cov-report term-missing'
+# command to run tests using coverage
+script: pytest --cov=beauty_ocean
 
 after_success:
-  - codecov -e TOX_ENV
+  - pytest --cov=beauty_ocean

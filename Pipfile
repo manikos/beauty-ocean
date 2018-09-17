@@ -15,14 +15,10 @@ Sphinx = "*"
 twine = "*"
 pytest = "*"
 codecov = "*"
+check-manifest = "*"
 
 [packages]
-inquirer = "*"
-python-digitalocean = "*"
-sshpubkeys = "*"
-click = "*"
-yaspin = "*"
-colored = "*"
+"e1839a8" = {path = ".", editable = true}
 
 [requires]
 python_version = "3.6"

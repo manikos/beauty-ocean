@@ -84,7 +84,6 @@ def create_droplet(token: str = None):
 
     if confirm:
         droplet = helpers.create_droplet_now(droplet_params)
-        print(helpers.droplet_data_json(droplet))
+        return helpers.droplet_data_json(droplet)
     else:
         print(p_text("Configuration declined! ¯\_(⊙︿⊙)_/¯"))
-        sys.exit(0)

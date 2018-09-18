@@ -28,7 +28,9 @@ def create_droplet_click(token):
     token (which will fail, obviously).
     If option omitted then it will look at DO_TOKEN env var.
     """
-    create_droplet(token=token)
+    res = create_droplet(token=token)
+    if res:
+        click.echo(res)
     return 0
 
 

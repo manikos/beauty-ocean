@@ -17,6 +17,13 @@ def test_create_droplet_click(mock_create_droplet):
     # Test with an argument
     runner.invoke(create_droplet_click, ['-t', 'ENV_VAR_TOKEN'])
     mock_create_droplet.assert_called_once_with(token='ENV_VAR_TOKEN')
+    mock_create_droplet.reset_mock()
+
+    # Test no echo
+    res = runner.invoke(create_droplet_click)
+    mock_create_droplet.return_value = None
+    assert res.exit_code == 0
+    mock_create_droplet.reset_mock()
 
     # Test help message
     help_result = runner.invoke(create_droplet_click, ['--help'])

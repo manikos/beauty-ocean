@@ -1,7 +1,7 @@
 import sys
 import click
 
-from beauty_ocean import create_droplet
+from beauty_ocean.droplet.entry import create_droplet
 
 
 @click.command()

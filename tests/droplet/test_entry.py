@@ -14,11 +14,11 @@ def test_create_droplet_decline_account(
     manager = mock.Mock()
     err = "Please run the script with the preferred API token. " \
           "Thanks for using this tool! ♥"
-    captured = capsys.readouterr()
     m_create_manager.return_value = manager
     m_confirm_account.return_value = False
     with pytest.raises(SystemExit) as sys_call:
         res = create_droplet("token")
+        captured = capsys.readouterr()
         assert res is None
         assert err in captured.out
     m_create_manager.assert_called_once_with("token")
@@ -33,7 +33,6 @@ def test_create_droplet_decline_droplet_data(
     m_create_manager, m_confirm_account, m_questions, capsys
 ):
     manager = mock.Mock()
-    captured = capsys.readouterr()
     m_create_manager.return_value = manager
     m_confirm_account.return_value = True
     m_questions.ask_for_image_type.return_value = "all"
@@ -52,12 +51,10 @@ def test_create_droplet_decline_droplet_data(
     m_questions.confirm_ipv6_addition.return_value = False
     m_questions.confirm_tags_addition.return_value = False
     m_questions.confirm_droplet_data.return_value = False
-    with pytest.raises(SystemExit) as sys_call:
-        res = create_droplet("token")
-        assert res is None
-        assert "Configuration declined! ¯\_(⊙︿⊙)_/¯" in captured.out
-    assert sys_call.type == SystemExit
-    assert sys_call.value.code == 0
+    res = create_droplet("token")
+    captured = capsys.readouterr()
+    assert "Configuration declined!" in captured.out
+    assert res is None
 
 
 @mock.patch("beauty_ocean.droplet.entry.helpers")

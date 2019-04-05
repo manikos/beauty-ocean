@@ -26,7 +26,7 @@ def get_token(token: str = None) -> str:
         return str(os.environ.get(token))
     if os.path.isfile(token):
         with open(token) as f:
-            return f.read()
+            return f.read().rstrip("\n")  # remove \n at the end
     if token:
         return token
     err = f"Token was not found in any of the available locations " \

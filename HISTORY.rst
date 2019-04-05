@@ -2,6 +2,10 @@
 History
 =======
 
+0.1.4 (2019-04-05)
+------------------
+* Fix exception occurred when token was imported by a file.
+
 0.1.3 (2018-09-18)
 ------------------
 * Fix ``create_droplet`` function which did not return JSON data. Now it does.

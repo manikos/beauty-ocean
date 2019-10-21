@@ -48,14 +48,14 @@ def test_question_message_string():
 
 
 def test_question_choices_default():
-    choices = [1, 2, 3]
+    choices = ["1", "2", "3"]
 
     q = config.question(choices=choices)[0]
     assert q.choices == choices
-    assert q.default == 1
+    assert q.default == "1"
 
     q = config.question(choices=choices, default=3)[0]
-    assert q.default == 3
+    assert q.default == "3"
 
 
 def test_q_partials():

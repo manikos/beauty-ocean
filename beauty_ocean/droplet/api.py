@@ -103,8 +103,9 @@ def poll_droplet(droplet: Droplet, poll_interval: int = 4) -> Droplet:
     :param int poll_interval: get droplet status every poll_interval seconds
     :return: digitalocean.Droplet.Droplet instance or None
     """
-    creation_action = droplet.get_action(droplet.action_ids[0])
-    result = creation_action.wait(update_every_seconds=poll_interval)
+    action = droplet.get_action(droplet.action_ids[0])
+    action.droplet_id = droplet.id
+    result = action.wait(update_every_seconds=poll_interval)
     if result:
         # droplet is now fully created (with IP, tags etc)
         text = "Retrieving droplet data after boot..."

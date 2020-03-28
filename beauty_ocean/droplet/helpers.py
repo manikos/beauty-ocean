@@ -153,7 +153,7 @@ def filter_droplet_return_data(droplet: Droplet) -> dict:
     :return: dict
     """
     to_return = {}
-    black_list = ["token", "_log"]
+    black_list = ["token", "_log", "_session"]
     for key, value in vars(droplet).items():
         if key in black_list:
             continue
